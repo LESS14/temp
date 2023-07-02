@@ -1,0 +1,153 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+
+}
+
+.main-page {
+  background-image: url('../../public/background.header.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.page-title {
+  color: #fff;
+  font-size: 5em;
+  user-select: none;
+  pointer-events: none;
+}
+
+.label {
+  max-width: 30%;
+  color: #fff;
+  user-select: none;
+  pointer-events: none;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.arrow {
+  color: #ffa500;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5rem;
+  animation: anim 1.5s infinite;
+  cursor: pointer;
+}
+
+.about {
+  background-color: #fff;
+  text-align: center;
+  padding: 5rem;
+}
+
+.about h1 {
+  font-weight: bold;
+  font-size: 3.3em;
+}
+
+.mt-15 {
+  margin-top: 8rem;
+}
+
+.doubt {
+  text-decoration: underline dashed;
+  cursor: help;
+  user-select: none;
+}
+
+.link {
+  text-decoration: none;
+  color: rgb(4, 126, 4);
+}
+
+a:hover {
+  text-decoration: underline;
+  color: rgb(4, 126, 4);
+}
+
+.works {
+  background-image: url('../../public/background.work.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 15rem;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.work-description {
+  padding: 10px;
+  background: #00000054;
+  color: #d8d8d8;
+  max-width: 100%;
+}
+
+.work-description p {
+  font-size: 24px;
+}
+
+.projects {
+  background-color: #fff;
+  font-size: 3.5em;
+  padding: 5rem;
+  text-align: center;
+}
+
+@keyframes anim {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-20px);
+  }
+  60% {
+    -webkit-transform: translateY(-10px);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .main-page {
+    overflow-x: hidden;
+  }
+
+  .page-title {
+    font-size: 3.5em;
+  }
+
+  .about h1 {
+    font-size: 1.4em;
+  }
+
+  .label {
+    display: none;
+  }
+
+  .projects {
+    display: none;
+  }
+}
